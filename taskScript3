@@ -1,0 +1,10 @@
+import re
+reg = re.compile (r'(\w+\d|\d+\w)')
+file = open ("name_file.txt","r")
+
+for line in file:
+     for i in line.split():
+       if re.match(reg,i):
+          print(i)
+
+
